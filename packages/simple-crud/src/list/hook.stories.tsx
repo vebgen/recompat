@@ -68,7 +68,7 @@ type StoryProps = UseCrudProps<SomeType, ListKey>
 
 // Common configuration for all stories.
 const storybookConfig: Meta<StoryProps> = {
-    title: 'CRUD/use2StageList',
+    title: 'CRUD/useCrud',
     tags: [],
     args: {
         canCreate: true,
@@ -78,13 +78,6 @@ const storybookConfig: Meta<StoryProps> = {
         useFetchList: useFetchList as any,
         toKey: (item: SomeType) => item.id as ListKey,
     },
-    parameters: {
-        fetchMock: {
-            mocks: [
-
-            ]
-        }
-    }
 };
 export default storybookConfig;
 

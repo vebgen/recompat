@@ -53,16 +53,22 @@ export interface UseCrudResult<T, ListKey extends string | number | symbol>
 
     /**
      * The callback for adding a new item.
+     *
+     * The item will be the last item in the list.
      */
     addNewItem: (unique: ListKey, data: T) => void;
 
     /**
      * The callback for editing an existing item.
+     *
+     * If the item does not exist, it will be added to the list.
      */
     editItem: (oldUnique: ListKey, newUnique: ListKey, data: T) => void;
 
     /**
      * The callback for removing an existing item.
+     *
+     * No error is thrown if the item does not exist.
      */
     removeItem: (unique: ListKey) => void;
 
@@ -148,7 +154,8 @@ export interface UseCrudProps<T, ListKey extends string | number | symbol> {
  * Generic hook for managing a list of items.
  *
  * The hook expects a hook function that fetches the list of items from the
- * API.
+ * API. This is suitable when the list of items is not paginated and the
+ * result includes all the properties for each item.
  *
  * This hook returns a object that can be used to manage the list of
  * items.
