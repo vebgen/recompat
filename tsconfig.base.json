@@ -15,7 +15,7 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
-
+            "@vebgen/simple-crud": ["packages/simple-crud/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

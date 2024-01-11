@@ -157,7 +157,7 @@ We use following settings:
   - `paths`: enables the use of
     [path mapping](https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping)
     in TypeScript; we add each package's `index.ts` to the paths so we can import
-    its content using `@@vebgen/some-package`;
+    its content using `@vebgen/some-package`;
 - `exclude`: `["node_modules", "dist"]` - files and folders that
   should not be part of the compilation; it is not a mechanism that
   prevents a file from being included in the codebase - it
