@@ -3,7 +3,7 @@
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "packages/simple-crud/src",
     "projectType": "library",
-    "tags": ["crud list create edit delete"],
+    "tags": ["crud", "list", "create", "edit", "delete"],
     "targets": {
         "lint": {
             "executor": "@nx/eslint:lint",

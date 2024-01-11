@@ -1,4 +1,29 @@
 {
     "name": "@vebgen/simple-crud",
-    "version": "0.0.1"
+    "version": "0.0.1",
+    "private": false,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vebgen/recompat.git",
+        "directory": "packages/simple-crud"
+    },
+    "bugs": {
+        "url": "https://github.com/vebgen/recompat/issues"
+    },
+    "homepage": "https://github.com/vebgen/recompat",
+    "license": "MIT",
+    "keywords": [
+        "crud", "list", "create", "edit", "delete"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "directory": "../../dist/packages/simple-crud"
+    },
+    "peerDependencies": {
+        "react": "18.2.0",
+        "core-js": "^3.34.0"
+    },
+    "dependencies": {
+
+    }
 }
