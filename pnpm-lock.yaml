@@ -256,7 +256,15 @@ importers:
         specifier: 5.3.3
         version: 5.3.3
 
-  packages/simple-crud: {}
+  packages/simple-crud:
+    dependencies:
+      core-js:
+        specifier: ^3.34.0
+        version: 3.34.0
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+    publishDirectory: ../../dist/packages/simple-crud
 
 packages:
 
