@@ -259,7 +259,12 @@ importers:
         specifier: 5.3.3
         version: 5.3.3
 
-  packages/access-api: {}
+  packages/access-api:
+    dependencies:
+      core-js:
+        specifier: ^3.34.0
+        version: 3.34.0
+    publishDirectory: ../../dist/packages/access-api
 
   packages/simple-crud:
     dependencies:
@@ -271,7 +276,18 @@ importers:
         version: 18.2.0
     publishDirectory: ../../dist/packages/simple-crud
 
-  packages/use-api: {}
+  packages/use-api:
+    dependencies:
+      '@vebgen/access-api':
+        specifier: ^0.0.2
+        version: link:../../dist/packages/access-api
+      core-js:
+        specifier: ^3.34.0
+        version: 3.34.0
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+    publishDirectory: ../../dist/packages/use-api
 
 packages:
 
