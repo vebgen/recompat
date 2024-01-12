@@ -1,0 +1,31 @@
+{
+    "name": "@vebgen/use-api",
+    "description": "React hook for fetching data from API",
+    "version": "0.0.2",
+    "private": false,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vebgen/recompat.git",
+        "directory": "packages/use-api"
+    },
+    "bugs": {
+        "url": "https://github.com/vebgen/recompat/issues"
+    },
+    "homepage": "https://github.com/vebgen/recompat",
+    "license": "MIT",
+    "keywords": [
+        "api", "hook", "react", "fetch"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "directory": "../../dist/packages/use-api"
+    },
+    "peerDependencies": {
+        "react": "18.2.0",
+        "core-js": "^3.34.0",
+        "@vebgen/access-api": "^0.0.2"
+    },
+    "dependencies": {
+
+    }
+}

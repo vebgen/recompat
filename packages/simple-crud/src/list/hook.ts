@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useReducer } from "react";
 import {
-    AccessPointError, FetchListResult, ListMode, RefreshList
+    FetchListResult, ListMode, RefreshList
 } from "./defs";
 import { CrudState } from "./state";
 import { reducer } from "./reducer";
+import { AccessPointError } from "@vebgen/access-api";
 
 
 /**

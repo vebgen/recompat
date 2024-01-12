@@ -1,6 +1,5 @@
 export type {
     ListMode,
-    AccessPointError,
     RefreshList,
     FetchListResult,
 } from './defs';
