@@ -68,7 +68,7 @@ export interface UseApiResult<
  *       when calling the `trigger()` function.
  * @param autoTrigger Whether to automatically trigger the API call on first
  *       render.
- * @param timeout The timeout for the API call.
+ * @param timeout The timeout for the API call. Default is 8000 (8 seconds).
  */
 export function useAPI<
     TPayload, TPathArgs, TResult, TContext
