@@ -272,7 +272,15 @@ importers:
         version: 3.34.0
     publishDirectory: ../../dist/packages/access-api
 
-  packages/react-buttons: {}
+  packages/react-buttons:
+    dependencies:
+      core-js:
+        specifier: ^3.34.0
+        version: 3.34.0
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+    publishDirectory: ../../dist/packages/react-buttons
 
   packages/simple-crud:
     dependencies:
