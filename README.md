@@ -1,6 +1,17 @@
 # recompat
 
-React common patterns
+React common patterns mono-repo.
+
+The repository contains the following packages:
+
+- [@vebgen/access-api](./packages/access-api/README.md) defines a base class
+  for accessing a REST API endpoint;
+- [@vebgen/use-api](./packages/use-api/README.md) builds on top of
+  `@vebgen/access-api` and provides a React hook for accessing a REST API
+  endpoint;
+- [@vebgen/simple-crud](./packages/simple-crud/README.md) provides the means
+  to access an endpoint that returns a list of items and allows the user to
+  create, update and delete items.
 
 ## Managing the Workspace
 

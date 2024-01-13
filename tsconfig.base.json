@@ -16,6 +16,7 @@
         "baseUrl": ".",
         "paths": {
             "@vebgen/access-api": ["packages/access-api/src/index.ts"],
+            "@vebgen/react-buttons": ["packages/react-buttons/src/index.ts"],
             "@vebgen/simple-crud": ["packages/simple-crud/src/index.ts"],
             "@vebgen/use-api": ["packages/use-api/src/index.ts"]
         }
