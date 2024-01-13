@@ -301,11 +301,11 @@ export abstract class AccessPoint<TPayload, TPathArgs, TResult, TContext> {
             // The server always returns JSON on success. This is one of the
             // errors that returns plain text like 404.
             console.log("[AccessPoint.call] not JSON");
-            return Promise.reject(this.adjustBuildInError(context!, {
+            return Promise.reject({
                 status: response.status,
                 code: 'err-other',
                 message: textResponse || response.statusText
-            }));
+            });
         }
 
         // If this is a success, return the result.
