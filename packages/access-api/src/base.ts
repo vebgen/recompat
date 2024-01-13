@@ -220,14 +220,14 @@ export abstract class AccessPoint<TPayload, TPathArgs, TResult, TContext> {
             console.log(
                 "[AccessPoint.call] Not allowed for context %O", context
             );
-            return Promise.reject({
+            return Promise.reject(this.adjustBuildInError(context!, {
                 status: 0,
                 code: 'err-permission',
                 message: (
                     "You don't have the required permissions to " +
                     "access this resource"
                 )
-            });
+            }));
         }
 
         // Create the abort controller.
@@ -249,7 +249,7 @@ export abstract class AccessPoint<TPayload, TPathArgs, TResult, TContext> {
         // Compute the headers to use.
         const finalHeaders: Record<string, string> = {
             'Content-Type': 'application/json',
-            ...this.additionalHeaders,
+            ...this.additionalHeaders(context!),
             ...headers
         };
         console.log("[AccessPoint.call] headers", finalHeaders);
@@ -276,11 +276,11 @@ export abstract class AccessPoint<TPayload, TPathArgs, TResult, TContext> {
         } catch (error) {
             // The request has not reached the server.
             console.error("[AccessPoint.call] call failed: %O", error);
-            return Promise.reject({
+            return Promise.reject(this.adjustBuildInError(context!, {
                 status: 0,
                 code: 'err-comm',
                 message: "Could not communicate with the server"
-            });
+            }));
         } finally {
             console.log("[AccessPoint.call] signal cleared");
             if (timeout !== -1) {
@@ -301,11 +301,11 @@ export abstract class AccessPoint<TPayload, TPathArgs, TResult, TContext> {
             // The server always returns JSON on success. This is one of the
             // errors that returns plain text like 404.
             console.log("[AccessPoint.call] not JSON");
-            return Promise.reject({
+            return Promise.reject(this.adjustBuildInError(context!, {
                 status: response.status,
                 code: 'err-other',
                 message: textResponse || response.statusText
-            });
+            }));
         }
 
         // If this is a success, return the result.
@@ -355,7 +355,7 @@ export abstract class AccessPoint<TPayload, TPathArgs, TResult, TContext> {
             "[AccessPoint.processResult] default (no processing)",
             result
         );
-        return result as TResult;
+        return Promise.resolve(result as TResult);
     }
 
 
@@ -381,10 +381,30 @@ export abstract class AccessPoint<TPayload, TPathArgs, TResult, TContext> {
         headers?: Readonly<Record<string, string>>,
     ): Promise<AccessPointError> {
         console.log("[AccessPoint.processFailure] default");
-        return {
+        return Promise.reject(this.adjustBuildInError(context, {
             status: response.status,
             code: 'err-unknown',
             message: "Unknown error",
-        };
+        }));
+    }
+
+    /**
+     * Make changes to the error structure before it is returned to the
+     * caller.
+     *
+     * This is mostly here to allow translated messages to be returned.
+     * The core core wraps all its errors in this call and the default
+     * implementation simply returns the error as-is.
+     *
+     * @param context The user-provided context of this call.
+     * @param error The error to adjust.
+     *
+     * @returns the adjusted error.
+     */
+    adjustBuildInError(
+        context: TContext,
+        error: AccessPointError
+    ): AccessPointError {
+        return error;
     }
 }

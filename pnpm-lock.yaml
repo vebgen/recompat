@@ -279,7 +279,7 @@ importers:
   packages/use-api:
     dependencies:
       '@vebgen/access-api':
-        specifier: ^0.0.2
+        specifier: ^0.0.3
         version: link:../../dist/packages/access-api
       core-js:
         specifier: ^3.34.0
