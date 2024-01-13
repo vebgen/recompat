@@ -21,7 +21,8 @@
     },
     "peerDependencies": {
         "react": "18.2.0",
-        "core-js": "^3.34.0"
+        "core-js": "^3.34.0",
+        "@vebgen/access-api": "0.0.4"
     },
     "dependencies": {
 

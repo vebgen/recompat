@@ -8,6 +8,12 @@ pagination) and the items that are retrieved when fetching the list
 include all properties (no additional fetch is required for editing and
 viewing).
 
+The `useCrud` hook delegates the retrieval of the items to another hook
+that it receives as a parameter. This allows the user to implement the
+retrieval of the items in a way that is suitable for their use case. The
+`useAPI` hook in the [@vebgen/use-api](../use-api/README.md) package is a
+good candidate for this.
+
 To use this library in your project, install it using your favorite
 package manager:
 

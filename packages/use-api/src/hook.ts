@@ -102,13 +102,19 @@ export function useAPI<
         dispatch({ type: "loading", payload: true, });
 
         // Call the API.
-        const result = await accessPoint.call(
-            contextOverride || context,
-            apiPayloadOverride || apiPayload,
-            pathArgsOverride || pathArgs,
-            headersOverride || headers,
-            timeout || 8000,
-        );
+        let result: AccessPointError | TResult;
+        try {
+            result = await accessPoint.call(
+                contextOverride || context,
+                apiPayloadOverride || apiPayload,
+                pathArgsOverride || pathArgs,
+                headersOverride || headers,
+                timeout || 8000,
+            );
+        } catch (error) {
+            console.error("[useAPI] API exception %O", error);
+            result = error as AccessPointError;
+        }
 
         // Dispatch the result.
         if ("code" in (result as any)) {
