@@ -285,8 +285,8 @@ importers:
   packages/simple-crud:
     dependencies:
       '@vebgen/access-api':
-        specifier: 0.0.5
-        version: link:../../dist/packages/access-api
+        specifier: ^0.0.5
+        version: 0.0.5(core-js@3.34.0)
       core-js:
         specifier: ^3.34.0
         version: 3.34.0
@@ -299,7 +299,7 @@ importers:
     dependencies:
       '@vebgen/access-api':
         specifier: ^0.0.5
-        version: link:../../dist/packages/access-api
+        version: 0.0.5(core-js@3.34.0)
       core-js:
         specifier: ^3.34.0
         version: 3.34.0
@@ -7105,6 +7105,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@vebgen/access-api@0.0.5(core-js@3.34.0):
+    resolution: {integrity: sha512-SxPGoCRT9V1V6GUJVnbRjgajBd/YfNbEz7MMz0+7s+K7g9JiIgJhfiKZ3XVKkn0UIfBg0cBk8/epuhnzPW7c1g==}
+    peerDependencies:
+      core-js: ^3.34.0
+    dependencies:
+      core-js: 3.34.0
+    dev: false
 
   /@webassemblyjs/ast@1.11.6:
     resolution: {integrity: sha512-IN1xI7PwOvLPgjcf180gC1bqn3q/QaOCwYUahIOhbYUu8KA/3tw2RT/T0Gidi1l7Hhj5D/INhJxiICObqpMu4Q==}

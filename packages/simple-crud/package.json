@@ -1,6 +1,6 @@
 {
     "name": "@vebgen/simple-crud",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "private": false,
     "repository": {
         "type": "git",
@@ -22,7 +22,7 @@
     "peerDependencies": {
         "react": "18.2.0",
         "core-js": "^3.34.0",
-        "@vebgen/access-api": "0.0.5"
+        "@vebgen/access-api": "^0.0.5"
     },
     "dependencies": {
 
