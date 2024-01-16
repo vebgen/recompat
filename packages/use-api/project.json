@@ -17,7 +17,8 @@
                 "tsConfig": "packages/use-api/tsconfig.lib.json",
                 "project": "packages/use-api/package.json",
                 "entryFile": "packages/use-api/src/index.ts",
-                "external": ["react", "react-dom", "react/jsx-runtime"],
+                "external": "all",
+                "format": ["esm", "cjs"],
                 "rollupConfig": "@nx/react/plugins/bundle-rollup",
                 "compiler": "babel",
                 "assets": [

@@ -124,12 +124,12 @@ export function useAPI<
         }
 
         return result;
-    }, [accessPoint, accessPoint, apiPayload, pathArgs, headers, timeout]);
+    }, [context, accessPoint, apiPayload, pathArgs, headers, timeout]);
 
     // Reset the state of the hook.
     const reset = useCallback(() => { dispatch({ type: "reset", }); }, []);
 
-    // Auto-trigger the API call if requested.
+    // Auto-trigger the API call if requested.pm
     if (autoTrigger && !state.autoTriggerGuard) {
         trigger();
     }

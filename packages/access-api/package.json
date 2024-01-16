@@ -22,8 +22,5 @@
     },
     "peerDependencies": {
         "core-js": "^3.34.0"
-    },
-    "dependencies": {
-
     }
 }

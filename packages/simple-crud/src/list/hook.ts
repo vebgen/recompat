@@ -219,7 +219,7 @@ export function useCrud<
         // Save the initial list of items in the state.
         dispatch({ type: "setData", payload: dataset, });
 
-    }, [listResult, errorInList, canRead, toKey]);
+    }, [listResult, errorInList, toKey]);
 
 
     // The callback for beginning to create a new item.

@@ -17,7 +17,8 @@
                 "tsConfig": "packages/simple-crud/tsconfig.lib.json",
                 "project": "packages/simple-crud/package.json",
                 "entryFile": "packages/simple-crud/src/index.ts",
-                "external": ["react", "react-dom", "react/jsx-runtime"],
+                "external": "all",
+                "format": ["esm", "cjs"],
                 "rollupConfig": "@nx/react/plugins/bundle-rollup",
                 "compiler": "babel",
                 "assets": [

@@ -17,7 +17,8 @@
                 "tsConfig": "packages/react-buttons/tsconfig.lib.json",
                 "project": "packages/react-buttons/package.json",
                 "entryFile": "packages/react-buttons/src/index.ts",
-                "external": ["react", "react-dom", "react/jsx-runtime"],
+                "external": "all",
+                "format": ["esm", "cjs"],
                 "rollupConfig": "@nx/react/plugins/bundle-rollup",
                 "compiler": "babel",
                 "assets": [
