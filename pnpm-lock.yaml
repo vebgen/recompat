@@ -289,26 +289,38 @@ importers:
       react:
         specifier: 18.2.0
         version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
     publishDirectory: ../../dist/packages/react-buttons
 
   packages/simple-crud:
     dependencies:
       '@vebgen/access-api':
-        specifier: ^0.0.5
-        version: 0.0.5(core-js@3.34.0)
+        specifier: 0.0.7
+        version: link:../../dist/packages/access-api
+      '@vebgen/use-api':
+        specifier: 0.0.7
+        version: link:../../dist/packages/use-api
       core-js:
         specifier: ^3.34.0
         version: 3.34.0
+      final-form:
+        specifier: ^4.20.10
+        version: 4.20.10
       react:
         specifier: 18.2.0
         version: 18.2.0
+      react-final-form:
+        specifier: ^6.5.9
+        version: 6.5.9(final-form@4.20.10)(react@18.2.0)
     publishDirectory: ../../dist/packages/simple-crud
 
   packages/use-api:
     dependencies:
       '@vebgen/access-api':
-        specifier: ^0.0.5
-        version: 0.0.5(core-js@3.34.0)
+        specifier: 0.0.7
+        version: link:../../dist/packages/access-api
       core-js:
         specifier: ^3.34.0
         version: 3.34.0
@@ -7145,14 +7157,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
-
-  /@vebgen/access-api@0.0.5(core-js@3.34.0):
-    resolution: {integrity: sha512-SxPGoCRT9V1V6GUJVnbRjgajBd/YfNbEz7MMz0+7s+K7g9JiIgJhfiKZ3XVKkn0UIfBg0cBk8/epuhnzPW7c1g==}
-    peerDependencies:
-      core-js: ^3.34.0
-    dependencies:
-      core-js: 3.34.0
-    dev: false
 
   /@vebgen/mui-rff-core@0.0.5(@emotion/react@11.11.3)(@emotion/styled@11.11.0)(@types/react@18.2.43)(core-js@3.35.0)(final-form@4.20.10)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-3jUjxM+/KSrz24V2F5fV6oa+XbzmL+YuyC2FojROK/Czdj7JAA6xoEHrA28/WcoF3/e0KkEaX4O9CES8vuqx4A==}
