@@ -16,3 +16,7 @@ export {
     CrudController,
     useCrudController,
 } from './list';
+
+
+export type { EditControllerProps } from "./edit";
+export { EditController } from "./edit";

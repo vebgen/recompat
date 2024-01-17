@@ -112,6 +112,11 @@ export interface UseCrudResult<T, ListKey extends string | number | symbol>
      * Clears any errors and results from the list of items.
      */
     resetList: () => void;
+
+    /**
+     * The function that converts an item to unique key.
+     */
+    toKey: (item: T) => ListKey;
 }
 
 
@@ -145,9 +150,9 @@ export interface UseCrudProps<T, ListKey extends string | number | symbol> {
     useFetchList: () => FetchListResult<T>;
 
     /**
-     * The function that converts a fast item to unique key.
+     * The function that converts an item to unique key.
      */
-    toKey: (fast: T) => ListKey;
+    toKey: (item: T) => ListKey;
 }
 
 
@@ -210,8 +215,8 @@ export function useCrud<
 
         // Create initial dataset.
         const dataset: Record<ListKey, T> = listResult.reduce(
-            (acc: Record<ListKey, T>, fast: T) => {
-                acc[toKey(fast)] = fast;
+            (acc: Record<ListKey, T>, item: T) => {
+                acc[toKey(item)] = item;
                 return acc;
             }, {} as Record<ListKey, T>
         );
@@ -323,6 +328,7 @@ export function useCrud<
         addNewItem,
         editItem,
         removeItem,
+        toKey,
         ...state
     } as UseCrudResult<T, ListKey>;
 }
