@@ -69,6 +69,10 @@ export interface EditControllerProps<T extends object, TContext> {
  *
  * It wraps the children in a form and provides the submit handler that
  * makes the API call to create or update the record.
+ *
+ * This controller is not CRUD-specific (it does not depend on the presence
+ * of the `crudContext` in the tree of components). It can be used for any
+ * form that needs to create or update a record.
  */
 export function EditController<T extends object, TContext>({
     validate,

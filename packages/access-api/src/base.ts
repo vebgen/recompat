@@ -393,7 +393,7 @@ export abstract class AccessPoint<TPayload, TPathArgs, TResult, TContext> {
      * caller.
      *
      * This is mostly here to allow translated messages to be returned.
-     * The core core wraps all its errors in this call and the default
+     * The core wraps all its errors in this call and the default
      * implementation simply returns the error as-is.
      *
      * @param context The user-provided context of this call.

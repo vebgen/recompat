@@ -6,6 +6,9 @@ The repository contains the following packages:
 
 - [@vebgen/access-api](./packages/access-api/README.md) defines a base class
   for accessing a REST API endpoint;
+- [@vebgen/react-buttons](./packages/react-buttons/README.md) has common
+  patterns for working with buttons (like support for a button that shows a
+  menu);
 - [@vebgen/use-api](./packages/use-api/README.md) builds on top of
   `@vebgen/access-api` and provides a React hook for accessing a REST API
   endpoint;
@@ -26,7 +29,8 @@ pnpm exec nx generate @nx/react:library \
     --unitTestRunner=jest \
     --bundler=rollup  \
     --component=false \
-    --importPath=@yournamespace/some-name \
+    --importPath=@vebgen/some-name \
+    --projectNameAndRootFormat=derived  \
     --publishable=true  \
     --style=none \
     --tags="a b c" \
@@ -39,7 +43,8 @@ pnpm exec nx generate @nx/js:library \
     --bundler=rollup \
     --directory=apps \
     --publishable=true \
-    --importPath=@vebgen/g11n-cli \
+    --importPath=@vebgen/some-name \
+    --projectNameAndRootFormat=derived  \
     --includeBabelRc=true \
     --testEnvironment=node \
     --no-interactive --dry-run

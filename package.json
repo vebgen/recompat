@@ -1,6 +1,6 @@
 {
     "name": "@vebgen/recompat",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "React common patterns",
     "license": "MIT",
     "private": true,
@@ -75,7 +75,7 @@
         "@types/react-router-dom": "5.3.3",
         "@typescript-eslint/eslint-plugin": "6.13.2",
         "@typescript-eslint/parser": "6.13.2",
-        "@vebgen/mui-rff-debug": "^0.0.5",
+        "@vebgen/mui-rff-debug": "^0.0.7",
         "babel-jest": "^29.7.0",
         "cypress": "^13.6.2",
         "eslint": "8.55.0",
