@@ -1,7 +1,7 @@
 {
     "name": "@vebgen/use-api",
     "description": "React hook for fetching data from API",
-    "version": "0.0.10",
+    "version": "0.0.11",
     "private": false,
     "repository": {
         "type": "git",
@@ -21,7 +21,7 @@
         "directory": "../../dist/packages/use-api"
     },
     "peerDependencies": {
-        "@vebgen/access-api": "0.0.10",
+        "@vebgen/access-api": "0.0.11",
         "core-js": "^3.37.0",
         "react": "18.2.0"
     },
