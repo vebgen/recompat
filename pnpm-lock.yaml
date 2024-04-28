@@ -280,14 +280,14 @@ importers:
   packages/access-api:
     dependencies:
       core-js:
-        specifier: ^3.34.0
+        specifier: ^3.37.0
         version: 3.34.0
     publishDirectory: ../../dist/packages/access-api
 
   packages/react-buttons:
     dependencies:
       core-js:
-        specifier: ^3.34.0
+        specifier: ^3.37.0
         version: 3.34.0
       react:
         specifier: 18.2.0
@@ -300,13 +300,13 @@ importers:
   packages/simple-crud:
     dependencies:
       '@vebgen/access-api':
-        specifier: 0.0.8
+        specifier: 0.0.9
         version: link:../../dist/packages/access-api
       '@vebgen/use-api':
-        specifier: 0.0.8
+        specifier: 0.0.9
         version: link:../../dist/packages/use-api
       core-js:
-        specifier: ^3.34.0
+        specifier: ^3.37.0
         version: 3.34.0
       final-form:
         specifier: ^4.20.10
@@ -324,10 +324,10 @@ importers:
   packages/use-api:
     dependencies:
       '@vebgen/access-api':
-        specifier: 0.0.8
+        specifier: 0.0.9
         version: link:../../dist/packages/access-api
       core-js:
-        specifier: ^3.34.0
+        specifier: ^3.37.0
         version: 3.34.0
       react:
         specifier: 18.2.0
@@ -3836,7 +3836,7 @@ packages:
       webpack-plugin-serve:
         optional: true
     dependencies:
-      ansi-html-community: 0.0.8
+      ansi-html-community: 0.0.9
       core-js-pure: 3.37.0
       error-stack-parser: 2.1.4
       html-entities: 2.5.2
@@ -7326,7 +7326,7 @@ packages:
   /@vebgen/js-common@0.0.1(core-js@3.37.0):
     resolution: {integrity: sha512-9LpL6n9vK/1N9PfQ0nYTjWLTHsJBEoSqofaGclvH4a0DZ+wXFknC6iGfrwnt00Zq6b8kmxlzwYsVXwsHW1jpJA==}
     peerDependencies:
-      core-js: ^3.34.0
+      core-js: ^3.37.0
     dependencies:
       core-js: 3.37.0
     dev: false
@@ -7335,7 +7335,7 @@ packages:
     resolution: {integrity: sha512-yyny0eqBQoYiWFPR0Tv5L2GtPZCBcappjocTdqBgzp7B1nS05fu98vIzr0s8pwOrBimwgU9XSUnqkya/X9OuDQ==}
     peerDependencies:
       '@vebgen/js-common': ^0.0.1
-      core-js: ^3.34.0
+      core-js: ^3.37.0
     dependencies:
       '@vebgen/js-common': 0.0.1(core-js@3.37.0)
       core-js: 3.37.0
@@ -7699,7 +7699,7 @@ packages:
     engines: {node: '>=14.16'}
     dev: true
 
-  /ansi-html-community@0.0.8:
+  /ansi-html-community@0.0.9:
     resolution: {integrity: sha512-1APHAyr3+PCamwNw3bXCPp4HFLONZt/yIH0sZp0/469KWNTEy+qN5jQ3GVX6DMZ1UXAi34yVwtTeaG/HpBuuzw==}
     engines: {'0': node >= 0.8.0}
     hasBin: true
@@ -7919,7 +7919,7 @@ packages:
       util: 0.12.5
     dev: true
 
-  /ast-types-flow@0.0.8:
+  /ast-types-flow@0.0.9:
     resolution: {integrity: sha512-OH/2E5Fg20h2aPrbe+QL8JZQFko0YZaF+j4mnQ7BGhfavO7OpSLa8a0y9sBwomHdSbkhTS8TQNayBfnW5DwbvQ==}
     dev: true
 
@@ -10376,7 +10376,7 @@ packages:
       aria-query: 5.3.0
       array-includes: 3.1.8
       array.prototype.flatmap: 1.3.2
-      ast-types-flow: 0.0.8
+      ast-types-flow: 0.0.9
       axe-core: 4.7.0
       axobject-query: 3.2.1
       damerau-levenshtein: 1.0.8
@@ -18746,7 +18746,7 @@ packages:
       '@types/serve-static': 1.15.7
       '@types/sockjs': 0.3.36
       '@types/ws': 8.5.10
-      ansi-html-community: 0.0.8
+      ansi-html-community: 0.0.9
       bonjour-service: 1.2.1
       chokidar: 3.6.0
       colorette: 2.0.20
@@ -18780,7 +18780,7 @@ packages:
   /webpack-hot-middleware@2.26.1:
     resolution: {integrity: sha512-khZGfAeJx6I8K9zKohEWWYN6KDlVw2DHownoe+6Vtwj1LP9WFgegXnVMSkZ/dBEBtXFwrkkydsaPFlB7f8wU2A==}
     dependencies:
-      ansi-html-community: 0.0.8
+      ansi-html-community: 0.0.9
       html-entities: 2.5.2
       strip-ansi: 6.0.1
     dev: true

@@ -1,6 +1,6 @@
 {
     "name": "@vebgen/react-buttons",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "private": false,
     "repository": {
         "type": "git",
@@ -20,7 +20,7 @@
         "directory": "../../dist/packages/react-buttons"
     },
     "peerDependencies": {
-        "core-js": "^3.34.0",
+        "core-js": "^3.37.0",
         "react-dom": "18.2.0",
         "react": "18.2.0"
     },

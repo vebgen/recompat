@@ -1,6 +1,6 @@
 {
     "name": "@vebgen/recompat",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "React common patterns",
     "license": "MIT",
     "private": true,

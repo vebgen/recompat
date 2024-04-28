@@ -1,6 +1,6 @@
 {
     "name": "@vebgen/simple-crud",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "private": false,
     "repository": {
         "type": "git",
@@ -20,9 +20,9 @@
         "directory": "../../dist/packages/simple-crud"
     },
     "peerDependencies": {
-        "@vebgen/access-api": "0.0.8",
-        "@vebgen/use-api": "0.0.8",
-        "core-js": "^3.34.0",
+        "@vebgen/access-api": "0.0.9",
+        "@vebgen/use-api": "0.0.9",
+        "core-js": "^3.37.0",
         "final-form": "^4.20.10",
         "react-final-form": "^6.5.9",
         "react": "18.2.0"
