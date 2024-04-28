@@ -14,7 +14,7 @@ At this point three categories of URLs are supported:
 - the API: used to access the backend services,
 - the authentication: used to access the authentication services.
 
-Following environment variables my be used to provide defaults (a
+Following environment variables may be used to provide defaults (a
 `REACT_APP_` or `NX_` prefix is required):
 
 - `API_DOMAIN`: the domain for the API,

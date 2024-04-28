@@ -300,10 +300,10 @@ importers:
   packages/simple-crud:
     dependencies:
       '@vebgen/access-api':
-        specifier: 0.0.9
+        specifier: 0.0.10
         version: link:../../dist/packages/access-api
       '@vebgen/use-api':
-        specifier: 0.0.9
+        specifier: 0.0.10
         version: link:../../dist/packages/use-api
       core-js:
         specifier: ^3.37.0
@@ -335,7 +335,7 @@ importers:
   packages/use-api:
     dependencies:
       '@vebgen/access-api':
-        specifier: 0.0.9
+        specifier: 0.0.10
         version: link:../../dist/packages/access-api
       core-js:
         specifier: ^3.37.0
