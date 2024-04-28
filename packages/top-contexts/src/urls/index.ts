@@ -6,4 +6,4 @@ export {
 } from './context';
 
 export type { AppUrlsControllerProps } from './controller';
-export { AppUrlsController } from './controller';
+export { AppUrlsController, createAppUrls } from './controller';

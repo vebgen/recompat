@@ -6,7 +6,8 @@ export {
     AppUrlsContext,
     AppUrlsProvider,
     useAppUrls,
-    AppUrlsController
+    AppUrlsController,
+    createAppUrls
 } from './urls';
 
 export type {

@@ -67,7 +67,7 @@ export interface AppUrlsControllerProps {
      *
      * @example 'https://www.example.com'
      */
-    authDomain: string;
+    authDomain?: string;
 
     /**
      * The path prefix for the API used to authenticate users.
@@ -78,7 +78,7 @@ export interface AppUrlsControllerProps {
      *
      * @example '/auth'
      */
-    authPath: string;
+    authPath?: string;
 
     /** The children that will have domains and urls available to them. */
     children: React.ReactNode;
@@ -86,17 +86,17 @@ export interface AppUrlsControllerProps {
 
 
 /**
- * Makes top level domains and paths available across the application.
+ * Creates the URLs for the application from user input, environment and
+ * defaults.
  */
-export const AppUrlsController = ({
+export const createAppUrls = ({
     webappDomain: userWebappDomain,
     webappPath: userWebappPath,
     apiDomain: userApiDomain,
     apiPath: userApiPath,
     authDomain: userAuthDomain,
     authPath: userAuthPath,
-    children
-}: AppUrlsControllerProps) => {
+}: Omit<AppUrlsControllerProps, "children">) => {
 
     // The domain of the web application.
     let webappDomain = (
@@ -181,6 +181,46 @@ export const AppUrlsController = ({
     if (!authPath.startsWith('/')) {
         authPath = '/' + authPath;
     }
+
+    return {
+        webappDomain,
+        webappPath,
+        apiDomain,
+        apiPath,
+        authDomain,
+        authPath,
+    };
+}
+
+
+/**
+ * Makes top level domains and paths available across the application.
+ */
+export const AppUrlsController = ({
+    webappDomain: userWebappDomain,
+    webappPath: userWebappPath,
+    apiDomain: userApiDomain,
+    apiPath: userApiPath,
+    authDomain: userAuthDomain,
+    authPath: userAuthPath,
+    children
+}: AppUrlsControllerProps) => {
+
+    const {
+        webappDomain,
+        webappPath,
+        apiDomain,
+        apiPath,
+        authDomain,
+        authPath,
+    } = createAppUrls({
+        webappDomain: userWebappDomain,
+        webappPath: userWebappPath,
+        apiDomain: userApiDomain,
+        apiPath: userApiPath,
+        authDomain: userAuthDomain,
+        authPath: userAuthPath,
+    });
 
     return (
         <AppUrlsProvider value={{
